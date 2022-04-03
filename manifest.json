@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Friend",
+    "version": "1.0",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "friend-addon@0styx0.xyz"
+        }
+    },
+    "description": "Inject wandering pet into webpage every x days",
+    "content_scripts": [{
+        "js": ["index.js"],
+        "matches" : ["<all_urls>"]
+    }],
+    "background": {
+        "persistent": true,
+        "page": "./friend-bar/header.html"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
+
